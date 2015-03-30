@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MySetting" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xu4-FM-BpT">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="My Setting" id="bIL-KK-fws"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z6v-8c-RpD">
+                                <rect key="frame" x="200" y="100" width="200" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9N0-v8-pPh">
+                                <rect key="frame" x="257" y="362" width="87" height="30"/>
+                                <state key="normal" title="Save Setting">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="crM-oD-qTT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0S-wp-Rll">
+                                <rect key="frame" x="254" y="438" width="93" height="30"/>
+                                <state key="normal" title="Clean Setting">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnClean:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ctt-ez-r7l"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zej-yr-YHY">
+                                <rect key="frame" x="0.0" y="192" width="600" height="162"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cia-vE-MPB">
+                                <rect key="frame" x="256" y="400" width="88" height="30"/>
+                                <state key="normal" title="Load Setting">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLoad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tX5-qk-jYh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Place that you like to work:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHo-FM-1Ut">
+                                <rect key="frame" x="200" y="176" width="286" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s0A-4s-okO">
+                                <rect key="frame" x="200" y="138" width="200" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xu4-FM-BpT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3IO-70-g5D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SHo-FM-1Ut" secondAttribute="trailing" constant="98" id="4WX-f7-HwD"/>
+                            <constraint firstItem="s0A-4s-okO" firstAttribute="top" secondItem="z6v-8c-RpD" secondAttribute="bottom" constant="8" symbolic="YES" id="6zf-tp-aZO"/>
+                            <constraint firstItem="Xu4-FM-BpT" firstAttribute="trailing" secondItem="Zej-yr-YHY" secondAttribute="trailing" id="7pg-Aq-n9U"/>
+                            <constraint firstItem="Cia-vE-MPB" firstAttribute="centerX" secondItem="h0S-wp-Rll" secondAttribute="centerX" id="97j-rj-JgQ"/>
+                            <constraint firstItem="Cia-vE-MPB" firstAttribute="top" secondItem="9N0-v8-pPh" secondAttribute="bottom" constant="8" symbolic="YES" id="B8Q-Qr-Buw"/>
+                            <constraint firstItem="s0A-4s-okO" firstAttribute="leading" secondItem="z6v-8c-RpD" secondAttribute="leading" id="BI7-Sn-Lle"/>
+                            <constraint firstAttribute="trailing" secondItem="Zej-yr-YHY" secondAttribute="trailing" id="C9c-fd-uh8"/>
+                            <constraint firstItem="Zej-yr-YHY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Hz0-s6-sCG"/>
+                            <constraint firstItem="Zej-yr-YHY" firstAttribute="top" secondItem="s0A-4s-okO" secondAttribute="bottom" constant="24" id="NNZ-fv-3bU"/>
+                            <constraint firstItem="Zej-yr-YHY" firstAttribute="centerX" secondItem="9N0-v8-pPh" secondAttribute="centerX" id="OWc-uD-IvD"/>
+                            <constraint firstItem="z6v-8c-RpD" firstAttribute="top" secondItem="Xu4-FM-BpT" secondAttribute="bottom" constant="36" id="QoI-Hy-D7x"/>
+                            <constraint firstItem="Xu4-FM-BpT" firstAttribute="centerX" secondItem="z6v-8c-RpD" secondAttribute="centerX" id="WHN-7c-HQH"/>
+                            <constraint firstItem="h0S-wp-Rll" firstAttribute="top" secondItem="Cia-vE-MPB" secondAttribute="bottom" constant="8" symbolic="YES" id="WUk-3F-D9a"/>
+                            <constraint firstItem="Cia-vE-MPB" firstAttribute="trailing" secondItem="9N0-v8-pPh" secondAttribute="trailing" id="d72-WK-Orr"/>
+                            <constraint firstItem="z6v-8c-RpD" firstAttribute="trailing" secondItem="s0A-4s-okO" secondAttribute="trailing" id="fKd-ec-e9o"/>
+                            <constraint firstItem="9N0-v8-pPh" firstAttribute="top" secondItem="Zej-yr-YHY" secondAttribute="bottom" constant="8" symbolic="YES" id="j4b-1y-tRK"/>
+                            <constraint firstItem="SHo-FM-1Ut" firstAttribute="top" secondItem="s0A-4s-okO" secondAttribute="bottom" constant="8" symbolic="YES" id="jxM-tU-I45"/>
+                            <constraint firstItem="Xu4-FM-BpT" firstAttribute="leading" secondItem="Zej-yr-YHY" secondAttribute="leading" id="luO-av-1Tc"/>
+                            <constraint firstItem="SHo-FM-1Ut" firstAttribute="leading" secondItem="s0A-4s-okO" secondAttribute="leading" id="oKS-vc-0z6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myPlaces" destination="Zej-yr-YHY" id="Cwo-fC-AII"/>
+                        <outlet property="txtComment" destination="s0A-4s-okO" id="yHR-dd-lLB"/>
+                        <outlet property="txtTitle" destination="z6v-8c-RpD" id="lQB-wg-BIr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
